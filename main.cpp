@@ -3,6 +3,7 @@
 #include <cstring>
 #include <algorithm>
 #include <string>
+#include <cstdlib>
 
 using namespace std;
 
@@ -416,13 +417,293 @@ void calcularMediaPonderada() {
     mediaP = soma / peso;
     cout << mediaP << "\n";
 }
+void exibirNome(){
+    string nome = "Guilherme";
+    cout << "Seu nome é: " << nome;
+}
 
+void exibirVogais(){
+    char array[] = {'a', 'e', 'i', 'o', 'u'};
+
+    cout << "Palavra 1: " << array[0];
+    cout << "Palavra 2: " << array[1];
+    cout << "Palavra 3: " << array[2];
+    cout << "Palavra 4: " << array[3];
+    cout << "Palavra 5: " << array[4];
+}
+
+void verificarVogal(){
+    string letra;
+
+    cout << "Digite uma letra em minusculo: ";
+    getline(cin, letra);
+
+    if(letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+        cout << "A letra digitada é vogal!";
+    }else{
+        cout << "A letra digitada não é vogal!";
+    }
+}
+
+void armazenarPalavra(){
+     char array[9] = {};
+
+    cout << "Digite uma palavra de 10 letras para armazenar em um array: ";
+    cin >> array;
+
+    cout << "A palavra digitada é: " << array;
+}
+void armazenarFrase(){
+     char array[19] = {};
+
+    cout << "Digite uma frase de 20 letras ou menos LETRA por LETRA: "; 
+    cin >> array[0];
+    cin >> array[1];
+    cin >> array[2];
+    cin >> array[3];
+    cin >> array[4];
+    cin >> array[5];
+    cin >> array[6];
+    cin >> array[7];
+    cin >> array[8];
+    cin >> array[9];
+    cin >> array[10];
+    cin >> array[11];
+    cin >> array[12];
+    cin >> array[13];
+    cin >> array[14];
+    cin >> array[15];
+    cin >> array[16];
+    cin >> array[17];
+    cin >> array[18];
+    cin >> array[19];
+
+}
+void exibirElementosArray(){
+    int array[] = {1,2,3,4,5,6,7,8,9,10};
+
+    cout << array[1] << endl;
+    cout << array[3] << endl;
+    cout << array[5] << endl;
+    cout << array[7] << endl;
+    cout << array[9] << endl;
+}
+
+void exibirElementosArrayString(){
+    string array[5] = {"Maça", "Pêssego", "Banana", "Abacaxi", "Kiwi"};
+
+    cout << array[2];
+
+}
+void exibirCores(){
+     int num;
+    string array[7] = {"Vermelho", "Amarelo", "Preto", "Verde", "Branco", "Azul", "Roxo"};
+
+    cout << "Digite um número de 1 a 7: ";
+    cin >> num;
+    switch (num)
+    {
+    case 1:
+        cout << array[0];
+        break;
+    case 2:
+        cout << array[1];
+        break;
+     case 3:
+        cout << array[2];
+        break;
+     case 4:
+        cout << array[3];
+        break;
+     case 5:
+        cout << array[4];
+        break;
+     case 6:
+        cout << array[5];
+        break;
+    case 7:
+        cout << array[6];
+        break;
+    }
+}
+void compararPalavras(){
+     char letra;
+    string array[10] = {"vaca", "crocodilo", "gato", "peixe", "hamster", "sapo", "leão", "macaco", "porco", "rã"};
+
+    cout << "Digite uma letra para verificar se um animal com essa letra existe no array: ";
+    cin >> letra;
+
+    if(letra == 'v'){
+        cout << array[0];
+    }else if(letra == 'c'){
+        cout << array[1];
+    }else if(letra == 'g'){
+        cout << array[2];
+    }else if(letra == 'p'){
+        cout << array[3];
+    }else if(letra == 'h'){
+        cout << array[4];
+    }else if(letra == 's'){
+        cout << array[5];
+    }else  if(letra == 'l'){
+        cout << array[6];
+    }else if(letra == 'm'){
+        cout << array[7];
+    }else if(letra == 'p'){
+        cout << array[8];
+    }else if(letra == 'r'){
+        cout << array[9];
+    }else{
+        cout << "Não temos um animal com esta letra!";
+    }
+}
+void contarVogais(){
+    char frase1[20];
+    int numVogais = 0;
+
+    if(frase1[0] == 'a' || frase1[0] == 'e' || frase1[0] == 'i' || frase1[0] == 'o' || frase1[0] == 'u')numVogais++;
+    if(frase1[1] == 'a' || frase1[1] == 'e' || frase1[1] == 'i' || frase1[1] == 'o' || frase1[1] == 'u')numVogais++;
+    if(frase1[2] == 'a' || frase1[2] == 'e' || frase1[2] == 'i' || frase1[2] == 'o' || frase1[2] == 'u')numVogais++;
+    if(frase1[3] == 'a' || frase1[3] == 'e' || frase1[3] == 'i' || frase1[3] == 'o' || frase1[3] == 'u')numVogais++;
+    if(frase1[4] == 'a' || frase1[4] == 'e' || frase1[4] == 'i' || frase1[4] == 'o' || frase1[4] == 'u')numVogais++;
+    if(frase1[5] == 'a' || frase1[5] == 'e' || frase1[5] == 'i' || frase1[5] == 'o' || frase1[5] == 'u')numVogais++;
+    if(frase1[6] == 'a' || frase1[6] == 'e' || frase1[6] == 'i' || frase1[6] == 'o' || frase1[6] == 'u')numVogais++;
+    if(frase1[7] == 'a' || frase1[7] == 'e' || frase1[7] == 'i' || frase1[7] == 'o' || frase1[7] == 'u')numVogais++;
+    if(frase1[8] == 'a' || frase1[8] == 'e' || frase1[8] == 'i' || frase1[8] == 'o' || frase1[8] == 'u')numVogais++;
+    if(frase1[9] == 'a' || frase1[9] == 'e' || frase1[9] == 'i' || frase1[9] == 'o' || frase1[9] == 'u')numVogais++;
+    if(frase1[10] == 'a' || frase1[10] == 'e' || frase1[10] == 'i' || frase1[10] == 'o' || frase1[10] == 'u')numVogais++;
+    if(frase1[11] == 'a' || frase1[11] == 'e' || frase1[11] == 'i' || frase1[11] == 'o' || frase1[11] == 'u')numVogais++;
+    if(frase1[12] == 'a' || frase1[12] == 'e' || frase1[12] == 'i' || frase1[12] == 'o' || frase1[12] == 'u')numVogais++;
+    if(frase1[13] == 'a' || frase1[13] == 'e' || frase1[13] == 'i' || frase1[13] == 'o' || frase1[13] == 'u')numVogais++;
+    if(frase1[14] == 'a' || frase1[14] == 'e' || frase1[14] == 'i' || frase1[14] == 'o' || frase1[14] == 'u')numVogais++;
+    if(frase1[15] == 'a' || frase1[15] == 'e' || frase1[15] == 'i' || frase1[15] == 'o' || frase1[15] == 'u')numVogais++;
+    if(frase1[16] == 'a' || frase1[16] == 'e' || frase1[16] == 'i' || frase1[16] == 'o' || frase1[16] == 'u')numVogais++;
+    if(frase1[17] == 'a' || frase1[17] == 'e' || frase1[17] == 'i' || frase1[17] == 'o' || frase1[17] == 'u')numVogais++;
+    if(frase1[18] == 'a' || frase1[18] == 'e' || frase1[18] == 'i' || frase1[18] == 'o' || frase1[18] == 'u')numVogais++;
+    if(frase1[19] == 'a' || frase1[19] == 'e' || frase1[19] == 'i' || frase1[19] == 'o' || frase1[19] == 'u')numVogais++;
+
+    cout << "Seu número de vogais é" << numVogais;
+
+
+}
+
+void substituirVogais(){
+      char texto[50];
+    cout << "Digite um texto: ";
+    cin.getline(texto, 50);
+
+    char *ptr = strchr(texto, 'a');
+
+    if (ptr != nullptr) {
+        int posicao = ptr - texto;
+        cout << "A primeira ocorrencia da letra 'a' esta na posicao: " << posicao << endl;
+    } else {
+        cout << "Nao foi encontrada nenhuma ocorrencia da letra 'a'." << endl;
+    }
+
+}
+void inverterPalavra(){
+    string string1;
+
+    cout << "Digite uma palavra de no maximo 10 letras: ";
+    cin >> string1;
+    //   getline(string1, cin);
+
+    reverse(string1.begin(), string1.end());
+
+    cout << "Sua palavra invertida é: " << string1;
+}
+
+void exibirNomeIdade(){
+    char nomes[50];
+    int idades[10];
+
+    for (int i = 0; i < 10; ++i) {
+        cout << "Digite o nome da " << i + 1 << "ª pessoa: ";
+        cin >> nomes[i];
+        cout << "Digite a idade da " << i + 1 << "ª pessoa: ";
+        cin >> idades[i];
+    }
+    cout << "\nNomes\t\tIdades\n";
+    for (int i = 0; i < 10; ++i) {
+        cout << nomes[i] << "\t\t" << idades[i] << endl;
+    }
+}
+void nomeProdutoPreco(){
+char produtos[10][50];
+float precos[10];
+
+for (int i = 0; i < 10; ++i) {
+    cout << "\nDigite o nome do " << i + 1 << "º produto: ";
+    cin >> produtos[i];
+    cout << "Digite o preço do " << i + 1 << "º produto: ";
+    cin >> precos[i];
+}
+
+// Impressão de produtos e preços
+cout << "\nProdutos\tPreços\n";
+for (int i = 0; i < 10; ++i) {
+    cout << produtos[i] << "\t\t" << precos[i] << endl;
+}
+}
+void calculaPalavras(){
+    char texto[50];
+    cout << "\nDigite um texto: ";
+    cin.getline(texto, 50);
+
+int numPalavras = 1;  // começa com 1 porque a primeira palavra não tem espaço antes
+for (int i = 0; i < strlen(texto); ++i) {
+    if (texto[i] == ' ') {
+        numPalavras++;
+    }
+}
+cout << "O texto contém " << numPalavras << " palavras.\n";
+}
+
+void palavraMaisLonga(){
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+    char frase[50];
+    cout << "\nDigite uma frase: ";
+    cin.getline(frase, 50);
+
+    char delimitador = ' ';
+    int inicioPalavra = 0;
+    int tamanhoPalavraMaisLonga = 0;
+    int inicioPalavraMaisLonga = 0;
+    int comprimentoAtual = 0;
+
+    for (int i = 0; frase[i] != '\0'; ++i) {
+        if (frase[i] == delimitador) {
+            if (comprimentoAtual > tamanhoPalavraMaisLonga) {
+                tamanhoPalavraMaisLonga = comprimentoAtual;
+                inicioPalavraMaisLonga = inicioPalavra;
+            }
+            comprimentoAtual = 0;
+            inicioPalavra = i + 1;
+        } else {
+            ++comprimentoAtual;
+        }
+    }
+
+    // Verificar a última palavra
+    if (comprimentoAtual > tamanhoPalavraMaisLonga) {
+        tamanhoPalavraMaisLonga = comprimentoAtual;
+        inicioPalavraMaisLonga = inicioPalavra;
+    }
+
+    char palavraMaisLonga[50];
+    strncpy(palavraMaisLonga, &frase[inicioPalavraMaisLonga], tamanhoPalavraMaisLonga);
+    palavraMaisLonga[tamanhoPalavraMaisLonga] = '\0';
+
+    cout << "A palavra mais longa é: " << palavraMaisLonga << endl;
+
+}
 // Menu principal
 int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     int opcao;
-    do {
+
         cout << "\nMenu de Opções:\n";
         cout << "1. Verificar se o número é maior que 10\n";
         cout << "2. Verificar se o número é igual a 10\n";
@@ -453,18 +734,21 @@ int main() {
         cout << "27. Imprimir números divisíveis por 3 e maiores que 10\n";
         cout << "28. Encontrar valor máximo e mínimo em array\n";
         cout << "29. Calcular média ponderada\n";
-        cout << "30. Exibir nome" << endl;
-        cout << "31. Exibir vogais" << endl;
-        cout << "32. Verificar vogal" << endl;
-        cout << "33. Armazenar palavra em array" << endl;
-        cout << "34. Armazenar frase em array" << endl;
-        cout << "35. Exibir elementos do array" << endl;
-        cout << "36. Exibir elemento do array de strings" << endl;
-        cout << "37. Exibir dia da semana" << endl;
-        cout << "38. Comparar palavras" << endl;
-        cout << "39. Contar vogais em frase" << endl;
-        cout << "40. Substituir vogais em frase" << endl;
-        cout << "41. Inverter palavra" << endl;
+        cout << "30. Exibir nome \n";
+        cout << "31. Exibir vogais \n";
+        cout << "32. Verificar vogal \n";
+        cout << "33. Armazenar palavra em array \n";
+        cout << "34. Armazenar frase em array \n";
+        cout << "35. Exibir elementos do array \n";
+        cout << "36. Exibir elemento do array de strings \n";
+        cout << "37. Exibir dia da semana \n";
+        cout << "38. Comparar palavras \n";
+        cout << "39. Substituir vogais em frase \n";
+        cout << "40. Inverter palavra \n";
+        cout << "41. Exibir o nome e idade da pessoa dentro de um array \n";
+        cout << "42. Exibir o nome do produto e seu preço \n";
+        cout << "43. Calcula o número de palavras em um texto \n";
+        cout << "44. Exibir a palavra mais longa de uma frase \n";
         cout << "0. Sair\n";
         cout << "Escolha uma opção: ";
         cin >> opcao;
@@ -540,22 +824,27 @@ int main() {
             break;
             case 35: exibirElementosArray();
             break;
-            case 36: exibirElementoArrayString();
+            case 36: exibirCores();
             break;
-            case 37: exibirDiaSemana();
+            case 37: compararPalavras();
             break;
-            case 38: compararPalavras();
+            case 38: contarVogais();
             break;
-            case 39: contarVogais();
+            case 39: substituirVogais();
             break;
-            case 40: substituirVogais();
+            case 40: inverterPalavra();
             break;
-            case 41: inverterPalavra();
+            case 41: exibirNomeIdade();
+            break;
+            case 42: nomeProdutoPreco();
+            break;
+            case 43: calculaPalavras();
+            break;
+            case 44: palavraMaisLonga();
             break;
             case 0: cout << "Saindo..." << endl; break;
             default: cout << "Opção inválida! Tente novamente." << endl; break;
         }
-    } while (opcao != 0);
-
     return 0;
 }
+
